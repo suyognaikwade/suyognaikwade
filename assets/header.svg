@@ -1,120 +1,131 @@
-<svg width="100%" height="200" viewBox="0 0 850 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" height="240" viewBox="0 0 850 240" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- Background Gradient -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#090d16"/>
-      <stop offset="50%" stop-color="#0f172a"/>
-      <stop offset="100%" stop-color="#020617"/>
+    <linearGradient id="execBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b14"/>
+      <stop offset="40%" stop-color="#0c1322"/>
+      <stop offset="100%" stop-color="#030712"/>
     </linearGradient>
 
-    <!-- Text Gradient -->
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Glowing Accent Border -->
+    <linearGradient id="goldCyanBorder" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="50%" stop-color="#818cf8"/>
-      <stop offset="100%" stop-color="#c084fc"/>
+      <stop offset="30%" stop-color="#818cf8"/>
+      <stop offset="70%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#10b981"/>
     </linearGradient>
 
-    <!-- Accent Border Gradient -->
-    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
-      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.8"/>
-      <stop offset="50%" stop-color="#818cf8" stop-opacity="1"/>
-      <stop offset="75%" stop-color="#c084fc" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    <!-- Card Background Gradient -->
+    <linearGradient id="metricCardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#17223b"/>
+      <stop offset="100%" stop-color="#0d1527"/>
     </linearGradient>
 
-    <!-- Glow Filter -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-    </filter>
-
-    <!-- Grid Pattern -->
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.6"/>
+    <!-- Subtle Tech Grid -->
+    <pattern id="execGrid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M 34 0 L 0 0 0 34" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.5"/>
     </pattern>
   </defs>
 
   <style>
-    .terminal-tag {
+    .kicker {
       font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
       font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 2px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
       fill: #38bdf8;
     }
-    .title {
+    .name-title {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       font-size: 44px;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: -0.5px;
-      fill: url(#textGrad);
+      fill: #ffffff;
     }
-    .subtitle {
+    .tagline {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-size: 15px;
-      font-weight: 500;
-      fill: #94a3b8;
+      font-size: 16px;
+      font-weight: 600;
+      fill: #f1f5f9;
+      letter-spacing: 0.3px;
+    }
+    .card-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 800;
       letter-spacing: 0.5px;
     }
-    .badge-text {
-      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    .card-label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       font-size: 11px;
       font-weight: 600;
       fill: #cbd5e1;
+      letter-spacing: 0.2px;
     }
-    @keyframes pulse {
-      0%, 100% { opacity: 0.7; }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.8; }
       50% { opacity: 1; }
     }
-    .pulse-line {
-      animation: pulse 4s ease-in-out infinite;
+    .glow-line {
+      animation: pulseGlow 3s ease-in-out infinite;
     }
   </style>
 
-  <!-- Background Base -->
-  <rect width="850" height="200" rx="12" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5"/>
+  <!-- Card Frame -->
+  <rect width="850" height="240" rx="14" fill="url(#execBg)" stroke="#22314e" stroke-width="1.8"/>
+  <rect width="850" height="240" rx="14" fill="url(#execGrid)"/>
 
-  <!-- Subtle Tech Grid Overlay -->
-  <rect width="850" height="200" rx="12" fill="url(#grid)"/>
+  <!-- Top Accent Window Dots -->
+  <circle cx="28" cy="24" r="5" fill="#ef4444" opacity="0.9"/>
+  <circle cx="44" cy="24" r="5" fill="#f59e0b" opacity="0.9"/>
+  <circle cx="60" cy="24" r="5" fill="#10b981" opacity="0.9"/>
 
-  <!-- Top Accent Terminal Bar -->
-  <circle cx="28" cy="24" r="5" fill="#ef4444" opacity="0.85"/>
-  <circle cx="44" cy="24" r="5" fill="#f59e0b" opacity="0.85"/>
-  <circle cx="60" cy="24" r="5" fill="#10b981" opacity="0.85"/>
+  <!-- Kicker Headline -->
+  <text x="82" y="29" class="kicker">FOUNDER • SERIAL SAAS BUILDER • GLOBAL E-COMMERCE ARCHITECT</text>
 
-  <!-- Terminal Label -->
-  <text x="80" y="28" class="terminal-tag">// SYSTEM ARCHITECT &amp; MULTI-CLOUD / DEVOPS ENGINEER</text>
+  <!-- Main Name -->
+  <text x="50%" y="82" text-anchor="middle" class="name-title">Suyog Naikwade</text>
 
-  <!-- Main Title -->
-  <text x="50%" y="95" text-anchor="middle" class="title">Suyog Naikwade</text>
+  <!-- Subtitle Tagline -->
+  <text x="50%" y="112" text-anchor="middle" class="tagline">Engineering Multi-Million Dollar Monthly Scale • Enterprise SaaS • High-Volume Retail Platforms</text>
 
-  <!-- Subtitle -->
-  <text x="50%" y="130" text-anchor="middle" class="subtitle">Enterprise SaaS Architecture • Multi-Cloud (AWS | GCP | Azure | OCI) • DevOps Automation • Applied AI</text>
-
-  <!-- Pills / Badges in Header -->
-  <g transform="translate(195, 150)">
-    <!-- Pill 1 -->
-    <rect x="0" y="0" width="130" height="26" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4"/>
-    <circle cx="14" cy="13" r="3.5" fill="#38bdf8"/>
-    <text x="26" y="17" class="badge-text">Distributed Systems</text>
-
-    <!-- Pill 2 -->
-    <rect x="142" y="0" width="105" height="26" rx="6" fill="#1e293b" stroke="#818cf8" stroke-width="1" stroke-opacity="0.4"/>
-    <circle cx="156" cy="13" r="3.5" fill="#818cf8"/>
-    <text x="168" y="17" class="badge-text">Multi-Cloud</text>
-
-    <!-- Pill 3 -->
-    <rect x="259" y="0" width="95" height="26" rx="6" fill="#1e293b" stroke="#a855f7" stroke-width="1" stroke-opacity="0.4"/>
-    <circle cx="273" cy="13" r="3.5" fill="#a855f7"/>
-    <text x="285" y="17" class="badge-text">DevOps CI/CD</text>
-
-    <!-- Pill 4 -->
-    <rect x="366" y="0" width="95" height="26" rx="6" fill="#1e293b" stroke="#34d399" stroke-width="1" stroke-opacity="0.4"/>
-    <circle cx="380" cy="13" r="3.5" fill="#34d399"/>
-    <text x="392" y="17" class="badge-text">Applied AI</text>
+  <!-- 4 Executive Impact Metric Cards -->
+  <!-- Card 1: Multi-Million Scale -->
+  <g transform="translate(24, 136)">
+    <rect width="188" height="74" rx="8" fill="url(#metricCardBg)" stroke="#f59e0b" stroke-width="1.2" stroke-opacity="0.7"/>
+    <circle cx="16" cy="22" r="4" fill="#f59e0b"/>
+    <text x="26" y="26" class="card-num" fill="#f59e0b">$1M+ / MONTH</text>
+    <text x="16" y="47" class="card-label">Client Revenue Scale</text>
+    <text x="16" y="63" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#94a3b8">High-Volume GMV</text>
   </g>
 
-  <!-- Glowing Bottom Accent Line -->
-  <rect x="50" y="196" width="750" height="2.5" rx="1" fill="url(#lineGrad)" class="pulse-line"/>
+  <!-- Card 2: SaaS & Retail Products -->
+  <g transform="translate(224, 136)">
+    <rect width="188" height="74" rx="8" fill="url(#metricCardBg)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.7"/>
+    <circle cx="16" cy="22" r="4" fill="#38bdf8"/>
+    <text x="26" y="26" class="card-num" fill="#38bdf8">50+ PLATFORMS</text>
+    <text x="16" y="47" class="card-label">Built &amp; Scaled</text>
+    <text x="16" y="63" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#94a3b8">Enterprise SaaS &amp; Apps</text>
+  </g>
+
+  <!-- Card 3: E-Commerce Dominance -->
+  <g transform="translate(424, 136)">
+    <rect width="194" height="74" rx="8" fill="url(#metricCardBg)" stroke="#a855f7" stroke-width="1.2" stroke-opacity="0.7"/>
+    <circle cx="16" cy="22" r="4" fill="#a855f7"/>
+    <text x="26" y="26" class="card-num" fill="#c084fc">E-COMMERCE DOMAIN</text>
+    <text x="16" y="47" class="card-label">Shopify • Magento • WP</text>
+    <text x="16" y="63" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#94a3b8">OpenCart • Headless</text>
+  </g>
+
+  <!-- Card 4: Multi-Cloud & AI Infrastructure -->
+  <g transform="translate(630, 136)">
+    <rect width="194" height="74" rx="8" fill="url(#metricCardBg)" stroke="#10b981" stroke-width="1.2" stroke-opacity="0.7"/>
+    <circle cx="16" cy="22" r="4" fill="#10b981"/>
+    <text x="26" y="26" class="card-num" fill="#34d399">MULTI-CLOUD &amp; AI</text>
+    <text x="16" y="47" class="card-label">AWS • GCP • Azure • OCI</text>
+    <text x="16" y="63" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#94a3b8">Agentic AI &amp; Automation</text>
+  </g>
+
+  <!-- Bottom Glowing Edge -->
+  <rect x="30" y="235" width="790" height="3" rx="1.5" fill="url(#goldCyanBorder)" class="glow-line"/>
 </svg>

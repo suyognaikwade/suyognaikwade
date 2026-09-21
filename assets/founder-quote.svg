@@ -1,0 +1,94 @@
+<svg width="100%" height="130" viewBox="0 0 850 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="quoteBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b14"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="quoteBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .quote-title {
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      fill: #f59e0b;
+    }
+    .quote-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 14.5px;
+      font-weight: 600;
+      fill: #ffffff;
+      letter-spacing: 0.2px;
+    }
+    .quote-author {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      fill: #38bdf8;
+    }
+
+    /* 4-quote rotation cycle (16s total: 4s each) */
+    @keyframes cycleQuote1 {
+      0%, 20% { opacity: 1; visibility: visible; }
+      25%, 95% { opacity: 0; visibility: hidden; }
+      100% { opacity: 1; visibility: visible; }
+    }
+    @keyframes cycleQuote2 {
+      0%, 20% { opacity: 0; visibility: hidden; }
+      25%, 45% { opacity: 1; visibility: visible; }
+      50%, 100% { opacity: 0; visibility: hidden; }
+    }
+    @keyframes cycleQuote3 {
+      0%, 45% { opacity: 0; visibility: hidden; }
+      50%, 70% { opacity: 1; visibility: visible; }
+      75%, 100% { opacity: 0; visibility: hidden; }
+    }
+    @keyframes cycleQuote4 {
+      0%, 70% { opacity: 0; visibility: hidden; }
+      75%, 95% { opacity: 1; visibility: visible; }
+      100% { opacity: 0; visibility: hidden; }
+    }
+
+    .q1 { animation: cycleQuote1 16s ease-in-out infinite; }
+    .q2 { animation: cycleQuote2 16s ease-in-out infinite; }
+    .q3 { animation: cycleQuote3 16s ease-in-out infinite; }
+    .q4 { animation: cycleQuote4 16s ease-in-out infinite; }
+  </style>
+
+  <!-- Frame Base -->
+  <rect width="850" height="130" rx="12" fill="url(#quoteBg)" stroke="#1e293b" stroke-width="1.8"/>
+  <rect x="0" y="0" width="850" height="3" fill="url(#quoteBorder)"/>
+
+  <!-- Kicker Tag -->
+  <text x="30" y="32" class="quote-title">// FOUNDER VISION &amp; EXECUTIVE PHILOSOPHY</text>
+
+  <!-- Quote 1 -->
+  <g class="q1" transform="translate(30, 62)">
+    <text x="0" y="0" class="quote-text">"The true measure of software architecture is the commercial value and scale it creates for clients."</text>
+    <text x="0" y="26" class="quote-author">— Suyog Naikwade | Building Multi-Million Dollar Monthly Systems</text>
+  </g>
+
+  <!-- Quote 2 -->
+  <g class="q2" transform="translate(30, 62)">
+    <text x="0" y="0" class="quote-text">"Scale is never an accident; it is the deliberate union of clean architecture, resilient cloud, and relentless focus."</text>
+    <text x="0" y="26" class="quote-author">— Suyog Naikwade | Enterprise SaaS &amp; High-Volume E-Commerce</text>
+  </g>
+
+  <!-- Quote 3 -->
+  <g class="q3" transform="translate(30, 62)">
+    <text x="0" y="0" class="quote-text">"Building a high-throughput platform means engineering every transaction, API call, and checkout for zero downtime."</text>
+    <text x="0" y="26" class="quote-author">— Suyog Naikwade | Shopify Plus • Magento • Distributed Cloud</text>
+  </g>
+
+  <!-- Quote 4 -->
+  <g class="q4" transform="translate(30, 62)">
+    <text x="0" y="0" class="quote-text">"Automate the routine, architect the critical, and build platforms that empower businesses to dominate their market."</text>
+    <text x="0" y="26" class="quote-author">— Suyog Naikwade | Applied AI &amp; Autonomous Digital Enterprises</text>
+  </g>
+</svg>

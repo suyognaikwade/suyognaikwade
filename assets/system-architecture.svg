@@ -1,0 +1,103 @@
+<svg width="100%" height="280" viewBox="0 0 850 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060911"/>
+      <stop offset="50%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="tierBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="33%" stop-color="#38bdf8"/>
+      <stop offset="66%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#162238"/>
+      <stop offset="100%" stop-color="#0e1726"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes flowLine {
+      0% { stroke-dashoffset: 20; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .flow-anim {
+      stroke-dasharray: 5, 5;
+      animation: flowLine 1.2s linear infinite;
+    }
+    .arch-header {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      fill: #38bdf8;
+    }
+    .tier-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .node-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      fill: #ffffff;
+    }
+    .node-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 600;
+      fill: #94a3b8;
+    }
+  </style>
+
+  <!-- Frame Base -->
+  <rect width="850" height="280" rx="14" fill="url(#archBg)" stroke="#1e293b" stroke-width="1.8"/>
+  <rect x="0" y="0" width="850" height="3" fill="url(#tierBorder)"/>
+
+  <!-- Title & Scope -->
+  <g transform="translate(24, 24)">
+    <text x="0" y="0" class="arch-header">// ENTERPRISE HIGH-SCALE ARCHITECTURE TOPOLOGY</text>
+    <rect x="420" y="-12" width="380" height="20" rx="4" fill="#132337" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="430" y="2" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#38bdf8">MULTI-MILLION $ GMV SCALE • 99.99% FAULT-TOLERANCE</text>
+  </g>
+
+  <!-- TIER 1: CLIENT & COMMERCE FRONTENDS -->
+  <g transform="translate(24, 46)">
+    <rect width="802" height="46" rx="7" fill="url(#boxGrad)" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="16" y="20" class="tier-title" fill="#f59e0b">TIER 1: COMMERCE &amp; FRONTEND</text>
+    <text x="16" y="36" class="node-sub">Shopify Plus • Next.js 15 Commerce • React 19 • Magento • WooCommerce / WP • OpenCart • Mobile Runtimes</text>
+  </g>
+
+  <!-- Flow Connector 1 -->
+  <line x1="425" y1="92" x2="425" y2="102" stroke="#38bdf8" stroke-width="1.8" class="flow-anim"/>
+
+  <!-- TIER 2: EDGE, INGRESS & ZERO-TRUST SECURITY -->
+  <g transform="translate(24, 102)">
+    <rect width="802" height="46" rx="7" fill="url(#boxGrad)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="16" y="20" class="tier-title" fill="#38bdf8">TIER 2: EDGE, INGRESS &amp; SECURITY</text>
+    <text x="16" y="36" class="node-sub">Cloudflare Edge CDN • Multi-Cloud Ingress (AWS ALB / GCP Cloud Armor) • JWT / OAuth2 • Strict Rate Limiting</text>
+  </g>
+
+  <!-- Flow Connector 2 -->
+  <line x1="425" y1="148" x2="425" y2="158" stroke="#818cf8" stroke-width="1.8" class="flow-anim"/>
+
+  <!-- TIER 3: MULTI-TENANT SAAS & AI ORCHESTRATION -->
+  <g transform="translate(24, 158)">
+    <rect width="802" height="46" rx="7" fill="url(#boxGrad)" stroke="#818cf8" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="16" y="20" class="tier-title" fill="#818cf8">TIER 3: SAAS MICROSERVICES &amp; APPLIED AI</text>
+    <text x="16" y="36" class="node-sub">Node.js &amp; TypeScript Core • Prisma ORM • Express/NestJS • Checkout Funnels • Autonomous Agent Pipelines • RAG</text>
+  </g>
+
+  <!-- Flow Connector 3 -->
+  <line x1="425" y1="204" x2="425" y2="214" stroke="#10b981" stroke-width="1.8" class="flow-anim"/>
+
+  <!-- TIER 4: MULTI-CLOUD INFRASTRUCTURE & PERSISTENCE -->
+  <g transform="translate(24, 214)">
+    <rect width="802" height="48" rx="7" fill="url(#boxGrad)" stroke="#10b981" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="16" y="20" class="tier-title" fill="#10b981">TIER 4: MULTI-CLOUD INFRASTRUCTURE &amp; DATA</text>
+    <text x="16" y="37" class="node-sub">AWS • GCP • Azure • Oracle Cloud (OCI) • PostgreSQL Clusters • Redis Caching • Vector DBs • K8s &amp; Jenkins CI/CD</text>
+  </g>
+</svg>
