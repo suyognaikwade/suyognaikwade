@@ -33,21 +33,21 @@
   <g transform="translate(25, 72)">
     <circle cx="8" cy="0" r="4.5" fill="#38bdf8"/>
     <text x="24" y="4" class="label">Total Contributions (All Commits)</text>
-    <text x="445" y="4" text-anchor="end" class="value">1,780+</text>
+    <text x="445" y="4" text-anchor="end" class="value">1,719+</text>
   </g>
 
   <!-- Metric 2: Repositories & Systems -->
   <g transform="translate(25, 108)">
     <circle cx="8" cy="0" r="4.5" fill="#818cf8"/>
     <text x="24" y="4" class="label">Total Repositories &amp; Architectures</text>
-    <text x="445" y="4" text-anchor="end" class="value">39+</text>
+    <text x="445" y="4" text-anchor="end" class="value">1+</text>
   </g>
 
   <!-- Metric 3: Pull Requests & Code Reviews -->
   <g transform="translate(25, 144)">
     <circle cx="8" cy="0" r="4.5" fill="#c084fc"/>
     <text x="24" y="4" class="label">Pull Requests &amp; Production PRs</text>
-    <text x="445" y="4" text-anchor="end" class="value">85+</text>
+    <text x="445" y="4" text-anchor="end" class="value">0+</text>
   </g>
 
   <!-- Metric 4: Multi-Tenant Systems Delivered -->
