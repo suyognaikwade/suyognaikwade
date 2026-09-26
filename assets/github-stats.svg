@@ -33,7 +33,7 @@
   <g transform="translate(25, 72)">
     <circle cx="8" cy="0" r="4.5" fill="#38bdf8"/>
     <text x="24" y="4" class="label">Total Contributions (All Commits)</text>
-    <text x="445" y="4" text-anchor="end" class="value">2,543+</text>
+    <text x="445" y="4" text-anchor="end" class="value">2,760+</text>
   </g>
 
   <!-- Metric 2: Repositories & Systems -->
