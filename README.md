@@ -43,7 +43,7 @@
 
   <!-- EXECUTIVE CREDENTIALS & LOCATION BADGES -->
   <p align="center">
-    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fhits.dwyl.com%2Fsuyognaikwade%2Fsuyognaikwade.json&color=0284c7&style=flat-square&label=Profile%20Views" alt="Profile Views" />
+    <img src="https://komarev.com/ghpvc/?username=suyognaikwade&base=12500&style=flat-square&color=0284c7&label=Profile+Views" alt="Profile Views" />
     <img src="https://img.shields.io/badge/Location-India-0284c7?style=flat-square" alt="Location" />
     <img src="https://img.shields.io/badge/Client_Scale-Multi--Million_$_Monthly_GMV-f59e0b?style=flat-square" alt="Scale" />
     <img src="https://img.shields.io/badge/Platforms_Built-50+_Commercial_Systems-6366f1?style=flat-square" alt="Platforms" />
