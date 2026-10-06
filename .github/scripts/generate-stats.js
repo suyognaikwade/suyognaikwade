@@ -52,87 +52,63 @@ async function fetchStats() {
 }
 
 function generateSvg({ totalCommits, totalPRs, totalContributedTo }) {
-  return `<svg width="100%" height="130" viewBox="0 0 850 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+  return `<svg width="495" height="210" viewBox="0 0 495 210" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="statsBase" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#090d16"/>
-      <stop offset="100%" stop-color="#040711"/>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b14"/>
+      <stop offset="100%" stop-color="#0f172a"/>
     </linearGradient>
-    <pattern id="statsGrid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.6" fill="#1e293b"/>
-    </pattern>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
   </defs>
 
   <style>
-    .meta-title {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 1.8px;
-      fill: #38bdf8;
-      text-transform: uppercase;
-    }
-    .meta-sub {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 9.5px;
-      font-weight: 600;
-      fill: #64748b;
-    }
-    .stat-val {
-      font-family: 'JetBrains Mono', 'Fira Code', monospace;
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-    }
-    .stat-lbl {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      fill: #cbd5e1;
-    }
-    .stat-sub {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-size: 9.5px;
-      font-weight: 500;
-      fill: #64748b;
-    }
+    .header { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 800; fill: #38bdf8; letter-spacing: 1.5px; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; font-weight: 600; fill: #e2e8f0; }
+    .value { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 15px; font-weight: 800; fill: #ffffff; }
+    .badge-scope { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; fill: #34d399; }
   </style>
 
-  <!-- Base Container -->
-  <rect width="850" height="130" rx="10" fill="url(#statsBase)" stroke="#1e293b" stroke-width="1.2"/>
-  <rect width="850" height="130" rx="10" fill="url(#statsGrid)"/>
+  <!-- Card Frame -->
+  <rect width="495" height="210" rx="12" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.8"/>
+  <rect x="0" y="0" width="495" height="2.5" fill="url(#cyanGrad)"/>
 
-  <!-- Top Title -->
-  <g transform="translate(32, 24)">
-    <text x="0" y="0" class="meta-title">GitHub Enterprise Telemetry</text>
-    <text x="210" y="0" class="meta-sub">// AUDITED DATA ACROSS PUBLIC &amp; PRIVATE ECOSYSTEMS</text>
+  <!-- Title & Scope Badge -->
+  <g transform="translate(25, 30)">
+    <text x="0" y="0" class="header">GITHUB ENTERPRISE METRICS</text>
+    <rect x="225" y="-13" width="180" height="22" rx="5" fill="#13271f" stroke="#34d399" stroke-width="0.8" stroke-opacity="0.6"/>
+    <circle cx="236" cy="-2" r="3.5" fill="#34d399"/>
+    <text x="245" y="2" class="badge-scope">PUBLIC + PRIVATE REPOS</text>
   </g>
 
-  <!-- 4 Metrics Bar -->
-  <g transform="translate(32, 42)">
-    <!-- Metric 1 -->
-    <rect x="0" y="0" width="186" height="68" rx="6" fill="#0d1424" stroke="#1e293b" stroke-width="1"/>
-    <text x="16" y="28" class="stat-val" fill="#38bdf8">${totalCommits.toLocaleString()}+</text>
-    <text x="16" y="46" class="stat-lbl">Total Contributions</text>
-    <text x="16" y="58" class="stat-sub">Public &amp; Private Commits</text>
+  <!-- Metric 1: Total Contributions -->
+  <g transform="translate(25, 72)">
+    <circle cx="8" cy="0" r="4.5" fill="#38bdf8"/>
+    <text x="24" y="4" class="label">Total Contributions (All Commits)</text>
+    <text x="445" y="4" text-anchor="end" class="value">${totalCommits.toLocaleString()}+</text>
+  </g>
 
-    <!-- Metric 2 -->
-    <rect x="200" y="0" width="186" height="68" rx="6" fill="#0d1424" stroke="#1e293b" stroke-width="1"/>
-    <text x="16" y="28" class="stat-val" fill="#34d399">${totalContributedTo > 50 ? totalContributedTo : 50}+</text>
-    <text x="16" y="46" class="stat-lbl">Platforms Architected</text>
-    <text x="16" y="58" class="stat-sub">Commercial &amp; SaaS Systems</text>
+  <!-- Metric 2: Repositories & Systems -->
+  <g transform="translate(25, 108)">
+    <circle cx="8" cy="0" r="4.5" fill="#818cf8"/>
+    <text x="24" y="4" class="label">Total Repositories &amp; Architectures</text>
+    <text x="445" y="4" text-anchor="end" class="value">${totalContributedTo}+</text>
+  </g>
 
-    <!-- Metric 3 -->
-    <rect x="400" y="0" width="186" height="68" rx="6" fill="#0d1424" stroke="#1e293b" stroke-width="1"/>
-    <text x="16" y="28" class="stat-val" fill="#818cf8">${totalPRs}+</text>
-    <text x="16" y="46" class="stat-lbl">Production PRs</text>
-    <text x="16" y="58" class="stat-sub">Engineered &amp; Reviewed</text>
+  <!-- Metric 3: Pull Requests & Code Reviews -->
+  <g transform="translate(25, 144)">
+    <circle cx="8" cy="0" r="4.5" fill="#c084fc"/>
+    <text x="24" y="4" class="label">Pull Requests &amp; Production PRs</text>
+    <text x="445" y="4" text-anchor="end" class="value">${totalPRs}+</text>
+  </g>
 
-    <!-- Metric 4 -->
-    <rect x="600" y="0" width="186" height="68" rx="6" fill="#0d1424" stroke="#1e293b" stroke-width="1"/>
-    <text x="16" y="28" class="stat-val" fill="#f59e0b">$1M+ / Mo</text>
-    <text x="16" y="46" class="stat-lbl">Client Transaction Scale</text>
-    <text x="16" y="58" class="stat-sub">Monthly GMV Powered</text>
+  <!-- Metric 4: Multi-Tenant Systems Delivered -->
+  <g transform="translate(25, 180)">
+    <circle cx="8" cy="0" r="4.5" fill="#34d399"/>
+    <text x="24" y="4" class="label">Enterprise Platforms &amp; Client Scale</text>
+    <text x="445" y="4" text-anchor="end" class="value">Multi-Million $ GMV</text>
   </g>
 </svg>`;
 }
