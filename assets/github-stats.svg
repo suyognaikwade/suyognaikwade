@@ -33,14 +33,14 @@
   <g transform="translate(25, 72)">
     <circle cx="8" cy="0" r="4.5" fill="#38bdf8"/>
     <text x="24" y="4" class="label">Total Contributions (All Commits)</text>
-    <text x="445" y="4" text-anchor="end" class="value">3,326+</text>
+    <text x="445" y="4" text-anchor="end" class="value">3,347+</text>
   </g>
 
   <!-- Metric 2: Repositories & Systems -->
   <g transform="translate(25, 108)">
     <circle cx="8" cy="0" r="4.5" fill="#818cf8"/>
     <text x="24" y="4" class="label">Total Repositories &amp; Architectures</text>
-    <text x="445" y="4" text-anchor="end" class="value">74+</text>
+    <text x="445" y="4" text-anchor="end" class="value">2+</text>
   </g>
 
   <!-- Metric 3: Pull Requests & Code Reviews -->
