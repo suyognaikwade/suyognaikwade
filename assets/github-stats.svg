@@ -58,19 +58,19 @@
   <g transform="translate(32, 42)">
     <!-- Metric 1 -->
     <rect x="0" y="0" width="186" height="68" rx="6" fill="#0d1424" stroke="#1e293b" stroke-width="1"/>
-    <text x="16" y="28" class="stat-val" fill="#38bdf8">1,780+</text>
+    <text x="16" y="28" class="stat-val" fill="#38bdf8">3,320+</text>
     <text x="16" y="46" class="stat-lbl">Total Contributions</text>
     <text x="16" y="58" class="stat-sub">Public &amp; Private Commits</text>
 
     <!-- Metric 2 -->
     <rect x="200" y="0" width="186" height="68" rx="6" fill="#0d1424" stroke="#1e293b" stroke-width="1"/>
-    <text x="16" y="28" class="stat-val" fill="#34d399">50+</text>
+    <text x="16" y="28" class="stat-val" fill="#34d399">74+</text>
     <text x="16" y="46" class="stat-lbl">Platforms Architected</text>
     <text x="16" y="58" class="stat-sub">Commercial &amp; SaaS Systems</text>
 
     <!-- Metric 3 -->
     <rect x="400" y="0" width="186" height="68" rx="6" fill="#0d1424" stroke="#1e293b" stroke-width="1"/>
-    <text x="16" y="28" class="stat-val" fill="#818cf8">85+</text>
+    <text x="16" y="28" class="stat-val" fill="#818cf8">2+</text>
     <text x="16" y="46" class="stat-lbl">Production PRs</text>
     <text x="16" y="58" class="stat-sub">Engineered &amp; Reviewed</text>
 
